@@ -19,7 +19,7 @@ sirajul-resume/
 Optional folders to create:
 ```
 assets/
-├── photo.jpg       ← Your headshot (replace placeholder in index.html)
+├── photo.jpg       ← Your headshot 
 └── projects/       ← Project screenshots
     ├── master.jpg
     └── demandiq.jpg
