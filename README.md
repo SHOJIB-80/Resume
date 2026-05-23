@@ -36,7 +36,7 @@ Key locations:
 - **Line ~19**: `<title>` tag — page title for SEO
 - **Line ~52**: `.nav-logo` — initials "SI."
 - **Hero section**: name, title tagline, stats
-- **Footer**: name, copyright year
+- **Footer**: name, copyright year,
 
 ### 2. Your Photo
 Find this comment in `index.html`:
