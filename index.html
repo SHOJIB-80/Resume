@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============================================================
+    SEO: Replace name, title, description, and URL below
+  ============================================================ -->
+  <title>Sirajul Islam — Front-End Developer & Data Science Student</title>
+  <meta name="description" content="Front-End Developer with 1.5+ years on Upwork. Building beautiful web experiences and AI-powered systems. Available for freelance and full-time roles." />
+  <meta name="keywords" content="Front-End Developer, JavaScript, HTML, CSS, Data Science, Machine Learning, Freelance, Upwork, Bangladesh" />
+  <meta name="author" content="Sirajul Islam" />
+  <meta property="og:title" content="Sirajul Islam — Front-End Developer & Data Science Student" />
+  <meta property="og:description" content="Portfolio & Resume of Sirajul Islam — building digital experiences that matter." />
+  <meta property="og:type" content="website" />
+  <!-- Replace with your deployed URL -->
+  <meta property="og:url" content="https://sirajul.dev" />
+
+  <!-- Fonts: Clash Display + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span class="loader-name">S</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-tag">Loading portfolio...</span>
+    </div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <!-- Replace initials if needed -->
+      <span class="logo-text">SI<span class="logo-dot">.</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <!-- Replace with your actual resume PDF link -->
+      <a href="resume.pdf" download class="btn btn-outline btn-sm">
+        <i class="fa-solid fa-download"></i> Resume
+      </a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+
+        <!-- Replace your name here -->
+        <h1 class="hero-name">
+          <span class="name-line">Sirajul</span>
+          <span class="name-line accent">Islam</span>
+        </h1>
+
+        <!-- Replace your title/tagline here -->
+        <p class="hero-title">Front-End Developer <span class="divider">/</span> Data Science Student</p>
+        <p class="hero-tagline">
+          I craft <em>fast, beautiful interfaces</em> and build <em>AI systems</em> that solve real problems —
+          from pixel-perfect landing pages to demand forecasting engines.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Hire Me
+          </a>
+          <!-- Replace with your actual resume PDF path -->
+          <a href="resume.pdf" download class="btn btn-glass">
+            <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            <i class="fa-solid fa-eye"></i> View Projects
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">1.5+</span>
+            <span class="stat-label">Years on Upwork</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+        PHOTO: Replace the img src below with your actual photo path
+        Recommended: 400x500px, professional headshot or creative portrait
+      ============================================================ -->
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+            <!-- Replace this entire block with: <img src="photo.jpg" alt="Sirajul Islam" /> -->
+            <div class="placeholder-inner">
+              <i class="fa-solid fa-user"></i>
+              <span>Your Photo Here</span>
+              <small>Replace in HTML</small>
+            </div>
+          </div>
+          <div class="photo-ring"></div>
+          <div class="photo-tag">
+            <i class="fa-solid fa-code"></i>
+            <span>Open to Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label reveal">About Me</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-heading">Building the web,<br /><span class="accent">one problem at a time.</span></h2>
+          <!-- Replace with your personal summary -->
+          <p>
+            I'm a self-driven Front-End Developer from Bangladesh who has spent 1.5+ years on Upwork delivering
+            high-quality web experiences for international clients. I care deeply about performance, design, and
+            the human behind the screen.
+          </p>
+          <p>
+            Beyond client work, I'm pursuing Data Science — actively building ML projects that blend analytical
+            rigor with real-world utility. From demand forecasting models to interactive web games, I chase
+            problems worth solving.
+          </p>
+          <p>
+            I think like a startup founder: ship fast, iterate faster, and never compromise on craft.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Creative Thinker</span>
+            <span class="tag">Freelance Pro</span>
+            <span class="tag">ML Enthusiast</span>
+            <span class="tag">Game Dev</span>
+          </div>
+        </div>
+        <div class="about-card-col reveal">
+          <div class="glass-card about-info-card">
+            <div class="info-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <!-- Replace with your location -->
+              <span>Dhaka, Bangladesh</span>
+            </div>
+            <div class="info-row">
+              <i class="fa-brands fa-upwork"></i>
+              <span>Upwork Freelancer</span>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Data Science Student</span>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-language"></i>
+              <span>Bengali, English</span>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Game Dev (HTML/JS + C++)</span>
+            </div>
+          </div>
+          <div class="glass-card collab-card">
+            <p class="collab-text">Currently open to:</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Freelance Projects</li>
+              <li><i class="fa-solid fa-check"></i> Remote Full-Time Roles</li>
+              <li><i class="fa-solid fa-check"></i> Startup Collaborations</li>
+              <li><i class="fa-solid fa-check"></i> ML / AI Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-label reveal">Technical Skills</div>
+      <h2 class="section-heading text-center reveal">What I bring <span class="accent">to the table</span></h2>
+
+      <div class="skills-grid">
+
+        <!-- Front-End -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Front-End Development</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-primary">HTML5</span>
+            <span class="pill pill-primary">CSS3</span>
+            <span class="pill pill-primary">JavaScript (ES6+)</span>
+            <span class="pill pill-primary">Responsive Design</span>
+            <span class="pill pill-primary">Animations</span>
+            <span class="pill pill-primary">SASS/SCSS</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <span>HTML / CSS</span>
+              <div class="bar"><div class="bar-fill" data-width="95"></div></div>
+              <span class="bar-pct">95%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span>JavaScript</span>
+              <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+              <span class="bar-pct">80%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span>Responsive Design</span>
+              <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+              <span class="bar-pct">90%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>UI/UX Design</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-accent">Figma</span>
+            <span class="pill pill-accent">Wireframing</span>
+            <span class="pill pill-accent">Design Systems</span>
+            <span class="pill pill-accent">Typography</span>
+            <span class="pill pill-accent">Color Theory</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <span>UI Design</span>
+              <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+              <span class="bar-pct">80%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span>Figma</span>
+              <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+              <span class="bar-pct">70%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-green">WordPress</span>
+            <span class="pill pill-green">Elementor</span>
+            <span class="pill pill-green">Git & GitHub</span>
+            <span class="pill pill-green">VS Code</span>
+            <span class="pill pill-green">Netlify</span>
+            <span class="pill pill-green">Vercel</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <span>WordPress</span>
+              <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+              <span class="bar-pct">85%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span>Git / GitHub</span>
+              <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+              <span class="bar-pct">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Science / ML -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Data Science / ML</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-purple">Python</span>
+            <span class="pill pill-purple">Pandas</span>
+            <span class="pill pill-purple">Scikit-learn</span>
+            <span class="pill pill-purple">NumPy</span>
+            <span class="pill pill-purple">Matplotlib</span>
+            <span class="pill pill-purple">Demand Forecasting</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <span>Python</span>
+              <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+              <span class="bar-pct">70%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span>ML / Data Analysis</span>
+              <div class="bar"><div class="bar-fill" data-width="60"></div></div>
+              <span class="bar-pct">60%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other -->
+        <div class="skill-card glass-card reveal span-2">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Other Technologies</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-orange">C++</span>
+            <span class="pill pill-orange">Java</span>
+            <span class="pill pill-orange">Data Structures</span>
+            <span class="pill pill-orange">Game Dev (HTML/JS)</span>
+            <span class="pill pill-orange">REST APIs</span>
+            <span class="pill pill-orange">SEO Basics</span>
+            <span class="pill pill-orange">Performance Optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-label reveal">Work History</div>
+      <h2 class="section-heading reveal">Experience that <span class="accent">speaks for itself</span></h2>
+
+      <div class="timeline">
+
+        <!-- Job 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <!-- Replace with your actual job title and company -->
+                <h3>Front-End Developer</h3>
+                <span class="timeline-company">Upwork — Freelance</span>
+              </div>
+              <!-- Replace with your actual dates -->
+              <span class="timeline-date">2023 — Present</span>
+            </div>
+            <ul class="timeline-list">
+              <!-- Replace with your actual achievements/responsibilities -->
+              <li>Delivered <strong>20+ responsive websites</strong> for international clients across US, UK, and EU markets with 100% Job Success Score.</li>
+              <li>Reduced client's average page load time by <strong>40%</strong> through code optimization and lazy loading strategies.</li>
+              <li>Built portfolio sites, agency pages, and interactive landing pages using HTML, CSS, and vanilla JS.</li>
+              <li>Maintained ongoing relationships with repeat clients, generating <strong>60% repeat business</strong>.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag-sm">HTML</span><span class="tag-sm">CSS</span><span class="tag-sm">JavaScript</span><span class="tag-sm">Upwork</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>WordPress & Elementor Developer</h3>
+                <span class="timeline-company">Freelance Clients</span>
+              </div>
+              <span class="timeline-date">2022 — 2023</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Designed and developed full business websites using WordPress and Elementor for SMEs and startups.</li>
+              <li>Implemented <strong>custom CSS/JS</strong> overrides to achieve unique, non-template looks from client briefs.</li>
+              <li>Managed domain, hosting setup, SEO plugins, and performance tuning for 10+ client sites.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag-sm">WordPress</span><span class="tag-sm">Elementor</span><span class="tag-sm">CSS</span><span class="tag-sm">SEO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Agency-Style Web Projects</h3>
+                <span class="timeline-company">Personal & Collaborative</span>
+              </div>
+              <span class="timeline-date">2022 — Present</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Led front-end development for agency-style projects including multi-page company sites, creative portfolios, and SaaS landing pages.</li>
+              <li>Developed reusable component libraries and design systems for consistent cross-project branding.</li>
+              <li>Collaborated remotely with designers and backend developers in Agile-like workflows.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag-sm">UI/UX</span><span class="tag-sm">Design Systems</span><span class="tag-sm">Collaboration</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-label reveal">Work Showcase</div>
+      <h2 class="section-heading text-center reveal">Projects that <span class="accent">made a difference</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: MASTER -->
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-type">WordPress Agency</div>
+            <!-- Replace with actual screenshot: <img src="projects/master.jpg" alt="MASTER" /> -->
+            <div class="project-img-placeholder"><i class="fa-solid fa-globe"></i></div>
+          </div>
+          <div class="project-body">
+            <!-- Replace with actual project details -->
+            <h3>MASTER Agency Website</h3>
+            <p>Full-scale marketing agency website built on WordPress + Elementor with custom animations, service showcases, and lead capture funnels. Delivered 30% increase in client inquiries.</p>
+            <div class="project-impact">
+              <i class="fa-solid fa-chart-line"></i> +30% lead conversion
+            </div>
+            <div class="project-stack">
+              <span>WordPress</span><span>Elementor</span><span>CSS3</span><span>JS</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <!-- Replace # with actual project URLs -->
+            <a href="#" class="btn btn-sm btn-glass" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            <a href="#" class="btn btn-sm btn-ghost" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2: Ascended -->
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-type">Portfolio / Landing Page</div>
+            <div class="project-img-placeholder"><i class="fa-solid fa-rocket"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Ascended Website</h3>
+            <p>Sleek, dark-themed portfolio/landing page with scroll-driven animations, glassmorphism cards, and a performance-first architecture. Built entirely in vanilla HTML/CSS/JS.</p>
+            <div class="project-impact">
+              <i class="fa-solid fa-gauge-high"></i> 98 Lighthouse score
+            </div>
+            <div class="project-stack">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GSAP</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            <a href="#" class="btn btn-sm btn-ghost" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3: DemandIQ -->
+        <div class="project-card glass-card reveal featured-project">
+          <div class="featured-badge">ML Capstone</div>
+          <div class="project-header">
+            <div class="project-type">Machine Learning</div>
+            <div class="project-img-placeholder"><i class="fa-solid fa-brain"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>DemandIQ — ML Forecasting Engine</h3>
+            <p>AI-powered demand forecasting system using time-series analysis and regression models. Predicts product demand with MAPE under 8%, helping businesses reduce overstock by 22%.</p>
+            <div class="project-impact">
+              <i class="fa-solid fa-chart-bar"></i> 8% MAPE | 22% waste reduction
+            </div>
+            <div class="project-stack">
+              <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Matplotlib</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <a href="#" class="btn btn-sm btn-ghost" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Endless Runner -->
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-type">Game Development</div>
+            <div class="project-img-placeholder"><i class="fa-solid fa-gamepad"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Endless Runner Game</h3>
+            <p>Browser-based endless runner built with HTML Canvas, CSS animations, and vanilla JS. Features procedural obstacle generation, score system, and mobile touch support.</p>
+            <div class="project-impact">
+              <i class="fa-solid fa-star"></i> Runs at 60fps on mobile
+            </div>
+            <div class="project-stack">
+              <span>HTML5 Canvas</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass" target="_blank"><i class="fa-solid fa-play"></i> Play</a>
+            <a href="#" class="btn btn-sm btn-ghost" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 5: Battle Run Arena -->
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-type">Game Concept</div>
+            <div class="project-img-placeholder"><i class="fa-solid fa-shield-halved"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Battle Run Arena</h3>
+            <p>Multiplayer arena battle concept with player vs environment mechanics, custom power-up system, and leaderboard integration. Designed in HTML/JS with C++ backend concepts.</p>
+            <div class="project-impact">
+              <i class="fa-solid fa-users"></i> Multiplayer architecture design
+            </div>
+            <div class="project-stack">
+              <span>HTML5</span><span>JS</span><span>C++ (concepts)</span><span>WebSockets</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="btn btn-sm btn-glass" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <a href="#" class="btn btn-sm btn-ghost" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-label reveal">Academic Background</div>
+      <h2 class="section-heading reveal">Education & <span class="accent">Learning</span></h2>
+
+      <div class="edu-grid">
+        <div class="edu-card glass-card reveal">
+          <div class="edu-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="edu-body">
+            <!-- Replace with your actual institution and program -->
+            <h3>Data Science & Machine Learning</h3>
+            <span class="edu-institution">Online / University Program</span>
+            <span class="edu-year">2023 — Present</span>
+            <p>Active coursework in statistics, Python programming, ML algorithms, and data visualization. Capstone focus on real-world demand forecasting and AI system design.</p>
+            <div class="edu-courses">
+              <span>Statistics</span>
+              <span>Machine Learning</span>
+              <span>Data Visualization</span>
+              <span>Python</span>
+              <span>AI Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card glass-card reveal">
+          <div class="edu-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="edu-body">
+            <h3>Computer Science Fundamentals</h3>
+            <span class="edu-institution">Self-Directed & Structured Learning</span>
+            <span class="edu-year">2021 — Present</span>
+            <p>Strong foundation in Java, Data Structures & Algorithms, OOP principles, and problem-solving through competitive programming practice.</p>
+            <div class="edu-courses">
+              <span>Java</span>
+              <span>Data Structures</span>
+              <span>Algorithms</span>
+              <span>OOP</span>
+              <span>C++</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <div class="section-label reveal">Social Proof</div>
+      <h2 class="section-heading text-center reveal">What clients <span class="accent">say</span></h2>
+
+      <div class="testimonials-grid">
+
+        <!-- Replace with actual client testimonials -->
+        <div class="testimonial-card glass-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Sirajul delivered a stunning landing page that exceeded our expectations. Fast turnaround, pixel-perfect execution, and excellent communication throughout. Will hire again without question."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div>
+              <!-- Replace with actual client names -->
+              <strong>James M.</strong>
+              <span>Marketing Director, UK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Incredibly talented developer. He took a rough Figma mockup and turned it into a fully responsive, animated website in record time. The attention to detail is unmatched."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SR</div>
+            <div>
+              <strong>Sarah R.</strong>
+              <span>Startup Founder, USA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card glass-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We needed a WordPress site that felt custom, not like a template. Sirajul nailed it. Clean code, fast load times, and he even caught SEO issues we weren't aware of."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div>
+              <strong>Ahmad K.</strong>
+              <span>Business Owner, UAE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-heading text-center reveal">Let's build something <span class="accent">great together</span></h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-subtext">Whether you need a website, want to collaborate on a data project, or just want to say hello — my inbox is always open.</p>
+
+          <div class="contact-links">
+            <!-- Replace all href values with your actual contact info -->
+            <a href="mailto:sirajul@email.com" class="contact-link">
+              <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <!-- Replace with your actual email -->
+                <span class="contact-link-value">sirajul@email.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/sirajul" class="contact-link" target="_blank">
+              <div class="contact-link-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <!-- Replace with your actual LinkedIn URL -->
+                <span class="contact-link-value">linkedin.com/in/sirajul</span>
+              </div>
+            </a>
+            <a href="https://github.com/sirajul" class="contact-link" target="_blank">
+              <div class="contact-link-icon"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <!-- Replace with your actual GitHub URL -->
+                <span class="contact-link-value">github.com/sirajul</span>
+              </div>
+            </a>
+            <a href="https://upwork.com/freelancers/sirajul" class="contact-link" target="_blank">
+              <div class="contact-link-icon"><i class="fa-brands fa-upwork"></i></div>
+              <div>
+                <span class="contact-link-label">Upwork</span>
+                <!-- Replace with your actual Upwork profile URL -->
+                <span class="contact-link-value">Hire on Upwork</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap glass-card reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <!-- 
+              FORM SUBMISSION: Connect to Formspree, EmailJS, or Netlify Forms.
+              Replace action with: action="https://formspree.io/f/YOUR_FORM_ID"
+            -->
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-note" id="formMsg"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">SI<span class="accent">.</span></div>
+        <p>Crafted with care by <strong>Sirajul Islam</strong></p>
+      </div>
+      <div class="footer-links">
+        <!-- Replace with your actual social links -->
+        <a href="https://github.com/sirajul" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/sirajul" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:sirajul@email.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://upwork.com/freelancers/sirajul" target="_blank"><i class="fa-brands fa-upwork"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 Sirajul Islam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
