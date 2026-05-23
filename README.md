@@ -1,162 +1,142 @@
-# Sirajul Islam — Resume Website
+# 🎯 Professional Resume Website
 
-A premium, ATS-friendly personal resume website + downloadable one-page resume.
+A modern, fully responsive resume website showcasing professional experience, skills, and projects.
 
 ---
 
-## Folder Structure
+## 📋 Overview
+
+This is a professionally designed personal resume website featuring:
+- ✨ Modern, clean interface with dark/light theme support
+- 📱 Fully responsive design for all devices
+- 🎨 Interactive animations and smooth transitions
+- 📄 ATS-friendly one-page resume (printable PDF)
+- 📧 Contact form integration
+- 🌐 Deployment-ready
+
+---
+
+## 📂 Project Structure
 
 ```
-sirajul-resume/
-├── index.html      ← Main portfolio website (all 8 sections)
-├── style.css       ← All styles (dark/light theme, glassmorphism, animations)
-├── script.js       ← All JavaScript (cursor, loader, reveals, form, etc.)
-├── resume.html     ← One-page printable/ATS resume (export to PDF here)
-├── resume.pdf      ← Your exported PDF resume
-└── README.md       ← This file
-```
+Resume/
+├── index.html              # Main portfolio website
+├── resume.html             # One-page printable/ATS resume
+├── style.css               # Styling (dark/light theme, animations)
+├── script.js               # Interactive features
+├── resume.pdf              # Downloadable resume (PDF export)
+├── LICENSE                 # Copyright & usage restrictions
+└── README.md               # This file
 
-Optional folders to create:
-```
+Optional:
 assets/
-├── photo.jpg       ← Your headshot 
-└── projects/       ← Project screenshots
-    ├── master.jpg
-    └── demandiq.jpg
+├── photo.jpg               # Profile photo
+└── projects/
+    ├── project1.jpg
+    └── project2.jpg
 ```
 
 ---
 
-## How to Edit Content
+## 🚀 Getting Started
 
-### 1. Your Name, Title, Tagline
-Search for `<!-- Replace` in `index.html` — every customization point is marked.
+### 1. **Customize Your Information**
+All customization points are marked with `<!-- Replace` comments in `index.html`:
 
-Key locations:
-- **Line ~19**: `<title>` tag — page title for SEO
-- **Line ~52**: `.nav-logo` — initials "SI."
-- **Hero section**: name, title tagline, stats
-- **Footer**: name, copyright year,
+- **Name & Title**: Update in hero section
+- **Contact Information**: Update email, LinkedIn, GitHub, portfolio links
+- **Profile Photo**: Replace with your headshot
+- **Projects**: Add your portfolio projects with live/GitHub links
+- **Testimonials**: Update client/colleague feedback
+- **Skills**: Customize technical and soft skills
 
-### 2. Your Photo
-Find this comment in `index.html`:
-```html
-<!-- Replace this entire block with: <img src="photo.jpg" alt="Sirajul Islam" /> -->
-```
-Replace the entire `<div class="placeholder-inner">...</div>` with:
-```html
-<img src="assets/photo.jpg" alt="Sirajul Islam" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" />
-```
+### 2. **Add Your Photo**
+1. Save your professional headshot as `assets/photo.jpg`
+2. Update the image path in the HTML
 
-### 3. Contact Links (replace all `href="#"` and placeholder emails/URLs)
-- Email: search `sirajul@email.com`
-- LinkedIn: search `linkedin.com/in/sirajul`
-- GitHub: search `github.com/sirajul`
-- Upwork: search `upwork.com/freelancers/sirajul`
-- Portfolio URL: search `sirajul.dev`
+### 3. **Export Resume as PDF**
+1. Open `resume.html` in **Google Chrome**
+2. Press `Ctrl+P` (Windows) or `Cmd+P` (Mac)
+3. Save as PDF with margins set to "None"
 
-### 4. Resume PDF
-- Export `resume.html` to PDF (instructions below)
-- Save as `resume.pdf` in the root folder
-- The "Download Resume" buttons already point to `resume.pdf`
+### 4. **Connect Your Contact Form**
+Choose one option:
 
-### 5. Projects
-Each project card in `index.html` has:
-```html
-<!-- Replace with actual project URLs -->
-<a href="#" ...>Live</a>
-<a href="#" ...>GitHub</a>
-```
-Replace `#` with your actual URLs.
-
-### 6. Testimonials
-Replace the placeholder client names, companies, and quotes in the Testimonials section.
-
-### 7. Contact Form
-The form is currently mocked. To make it real:
-
-**Option A — Formspree (easiest):**
-1. Go to https://formspree.io, create a free account
-2. Create a form, get your form ID (e.g. `xrgbkpqz`)
-3. Change the form submission handler in `script.js` or add `action` attribute:
+**Option A — Formspree (Recommended):**
 ```html
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 ```
 
 **Option B — EmailJS:**
-1. Go to https://emailjs.com
-2. Follow their setup, replace the mock submit handler in `script.js`
-
-**Option C — Netlify Forms:**
-Add `netlify` attribute to the form tag and deploy on Netlify.
+Visit https://emailjs.com and configure in `script.js`
 
 ---
 
-## How to Export the One-Page PDF Resume
+## 🎨 Theme Customization
 
-1. Open `resume.html` in **Google Chrome**
-2. Press `Ctrl+P` (Windows) or `Cmd+P` (Mac)
-3. Set destination to **"Save as PDF"**
-4. Set margins to **"None"** or **"Minimum"**
-5. Make sure **"Background graphics"** is checked
-6. Click **Save**
-7. Save as `resume.pdf` in the project root
-
-The resume is already ATS-optimized:
-- Semantic HTML tags (`h1`, `h3`, `ul`, `strong`)
-- No images in text areas
-- All text is selectable/copyable
-- Clean hierarchy for parsers
+Edit the CSS variables in `style.css` (`:root` section):
+```css
+--accent: #63b3ed;        /* Primary accent color */
+--accent-warm: #f6ad55;   /* Warm accent */
+--accent-purple: #b794f4; /* Purple accent */
+--accent-green: #68d391;  /* Success/positive color */
+```
 
 ---
 
-## Deploy on Netlify
+## 🌍 Deployment
 
-1. Push your folder to GitHub:
+### **Netlify (Recommended)**
 ```bash
 git init
 git add .
-git commit -m "Initial commit: resume website"
-git remote add origin https://github.com/YOUR_USERNAME/sirajul-resume.git
+git commit -m "Deploy resume website"
+git remote add origin https://github.com/YOUR_USERNAME/Resume.git
 git push -u origin main
 ```
+Then connect your repo on [Netlify.com](https://netlify.com)
 
-2. Go to https://netlify.com → "New site from Git"
-3. Connect your GitHub repo
-4. Build settings: leave blank (static site)
-5. Click **Deploy**
+### **Vercel**
+Connect your GitHub repo on [Vercel.com](https://vercel.com)
 
-**Custom domain:** Netlify Settings → Domain Management → Add custom domain (e.g. `sirajul.dev`)
-
----
-
-## Deploy on Vercel
-
-1. Push to GitHub (same as above)
-2. Go to https://vercel.com → "New Project" → Import from GitHub
-3. Framework preset: **Other**
-4. Click **Deploy**
+### **GitHub Pages**
+Push to `main` branch and enable Pages in repository settings.
 
 ---
 
-## Theme Customization
+## 📊 Tech Stack
 
-All colors are CSS variables in `style.css` `:root` block:
-```css
---accent:       #63b3ed;   /* Main blue — change to your brand color */
---accent-warm:  #f6ad55;   /* Gold/amber accent */
---accent-purple:#b794f4;   /* Purple accent */
---accent-green: #68d391;   /* Green (success, "open to work") */
-```
+- **HTML5** — Semantic markup, ATS-optimized
+- **CSS3** — Modern styling, animations, glassmorphism effects
+- **JavaScript (Vanilla)** — Interactive features, no dependencies
+- **Google Fonts** — Professional typography
+- **Font Awesome** — Icons
 
 ---
 
-## Performance Tips
+## ⚡ Performance Optimization
 
-- Compress your photo: use https://squoosh.app (target < 200KB)
-- Run Lighthouse audit after deploy: Chrome DevTools → Lighthouse
-- Add `loading="lazy"` to project screenshot images
+- Compress images: Use [Squoosh.app](https://squoosh.app) (target < 200KB)
+- Run Lighthouse audit after deployment
+- Enable lazy loading for project images
+- Minify CSS/JS before production deployment
 
 ---
 
-Built with: HTML5 · CSS3 · Vanilla JS · Google Fonts · Font Awesome
+## 📝 License
+
+**All Rights Reserved** — See [LICENSE](LICENSE) file for details.
+
+This resume website and all its contents are protected by copyright. Unauthorized copying, reproduction, or distribution is strictly prohibited.
+
+---
+
+## 📞 Support
+
+For issues or questions about the website, please open an issue in the repository.
+
+---
+
+**Built with:** HTML5 · CSS3 · Vanilla JavaScript · Google Fonts · Font Awesome
+
+Made with ❤️ by Sirajul Islam
