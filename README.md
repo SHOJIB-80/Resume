@@ -12,7 +12,7 @@ sirajul-resume/
 ├── style.css       ← All styles (dark/light theme, glassmorphism, animations)
 ├── script.js       ← All JavaScript (cursor, loader, reveals, form, etc.)
 ├── resume.html     ← One-page printable/ATS resume (export to PDF here)
-├── resume.pdf      ← [YOU ADD] Your exported PDF resume
+├── resume.pdf      ← Your exported PDF resume
 └── README.md       ← This file
 ```
 
